@@ -7,7 +7,11 @@ services:
     networks:
       - ai_network
     environment:
-      - COLLECTION=agent3_stats
+      - COLLECTION=survey_responses
+      - QDRANT_HOST=qdrant
+      - QDRANT_PORT=6333
+    volumes:
+      - ./surveys:/app/surveys
 
 networks:
   ai_network:
